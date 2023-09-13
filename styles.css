@@ -72,7 +72,7 @@ a {
 }
 
 /* header styles */
-.header {
+#navbar {
     width: 100%;
     padding: .5em 0;
     display: flex;
@@ -85,7 +85,7 @@ a {
 }
 
 
-.title-container, #navbar {
+.title-container, .sub-navbar {
     width: 80%;
     margin: 0 auto 0 auto;
 
@@ -147,7 +147,7 @@ a {
 
 .project-tile {
     width: 100%;
-    height: 550px;
+    height: 450px;
     border-radius: 10px;
 }
 
@@ -279,7 +279,9 @@ h3 {
 .container {
     min-width: 100px;
 }
-.header {
+
+
+#navbar {
    flex-direction: row;
     text-align: left;
     padding: 0;
@@ -295,7 +297,7 @@ h3 {
 
 }
 
-#navbar {
+.sub-navbar {
     justify-self: flex-end;
     
 }
