@@ -1,0 +1,413 @@
+/*GENERAL STYLES */
+ *, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --body-color:#111111;
+    --header-color:#40090F;
+    /* --primary-color:; */
+    --card-secondary-color:#2f2f2f;
+    --heading-color:#a4b8da;
+    --link-color:#8d99af;
+    /* --footer-color:; */
+    --font-color:#f8f9fa;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--body-color);
+    color: var(--font-color);
+    font-size: 1.2rem;
+    font-family: monospace;
+}
+
+img, iframe {
+    max-width: 100%;
+    display: block;
+}
+
+/* ====TYPOGRAPHY==== */
+h1, h2, h3, h4, a, .title {
+    font-weight: 700;
+}
+
+h1 {
+   color: var(--heading-color);
+   font-size: 2.5rem;
+}
+
+h2, h3, h4 {
+    color: var(--heading-color);
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.title {
+    font-size: 1.3rem;
+}
+
+
+
+.nav-bar-items a:hover {
+    color: var(--link-color);
+    border-bottom: 2px solid var(--link-color);
+}
+
+
+
+
+/* ====LAYOUT====  */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header styles */
+.header {
+    width: 100%;
+    padding: .5em 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--header-color);
+    text-align: center;
+    position: fixed;
+    top: -1px;
+
+}
+
+.title-container, #navbar {
+    width: 80%;
+    margin: 0 auto 0 auto;
+
+}
+
+.nav-bar-container {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-bar-items {
+    padding: 0;
+    margin: .3em 0;
+}
+
+/* Welcome section */
+
+#welcome-section {
+    margin-top: 12em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.author-image {
+    /* width: 50%; */
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 1.5em solid;
+    border-image: linear-gradient(90deg, 
+    var(--header-color) 40%, 
+    var(--font-color)) 1;
+    
+}
+
+/* projects section */
+#projects {
+    margin-bottom: 4em;
+}
+
+#project-title {
+    padding: 1.5em;
+}
+.projects-worked-on {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2em;
+}
+
+.project-cards {
+    width: 100%;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.project-card-image {
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 8px 8px 0 0;
+    
+    
+}
+
+.project-card-title {
+    height: 10%;
+    text-align: center;
+    background-color: var(--card-secondary-color);
+    margin: 0;
+    padding: .3em;
+
+}
+
+.project-card-title a {
+    color: var(--heading-color);
+}
+
+
+/* project button */
+.button-container {
+    /* display: in; */
+    width: 50%;
+    margin: 3em auto 0 auto;
+    text-align: center;
+}
+
+.button-container button {
+    padding: 1em;
+    font-weight: 700;
+    color: var(--font-color);
+    background-color: var(--header-color);
+    border: none;
+    font-size: 1.1rem;
+}
+
+.button-container button:hover, button:focus {
+    color: var(--header-color);
+    background-color: var(--heading-color);
+    cursor: pointer;
+    
+}
+
+/* Contact Me Section */
+#contact-me {
+    text-align: center;
+    margin-bottom: 4em;
+}
+.contact-links {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    
+
+}
+
+.sm-name {
+    display: none;
+}
+
+.sm-link-container {
+ width: 15%; 
+
+}
+
+.SM-icons {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+    
+    
+}
+
+/* footer section */
+hr {
+    margin-bottom: 0;
+}
+.footer {
+ padding: 1em 0;
+ text-align: center;
+ background-color: var(--header-color);
+}
+
+/* ====ANIMATIONS==== */
+
+@keyframes author-image {
+    0% {
+        transform: scale(0);
+    }
+
+    /* 50% {
+        transform: scale(.5);
+    } */
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ====MEDIA QUERIES==== */
+
+@media screen and (min-width: 619px) {
+/* ==typography== */
+h1 {
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px var(--font-color);
+ }
+
+ h2 {
+    font-size: 2rem;
+    
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+    /* header section */
+.header {
+   flex-direction: row;
+    text-align: left;
+    padding: 0;
+    
+}
+
+.title-container, #navbar {
+    
+    margin-left: auto;
+    transform: translateX(1em);
+
+}
+
+.nav-bar-container {
+    flex-direction: row;
+    margin-right: 1em;
+    
+    
+    
+}
+
+.nav-bar-items {
+    margin-right: 4em;
+    position: relative;
+    top: 15px;
+}
+
+/* Welcome section */
+
+#welcome-section {
+    margin-top: 5em;
+    flex-direction: row;
+    text-align: left;
+    height: 100vh;
+    
+    
+}
+
+.author-image-container{
+    width: 40%;
+    animation: author-image 5s ease-in-out 1ms 1;
+}
+
+.author-image {
+    height: 80%;
+
+}
+
+.intro {
+    align-self: center;
+    width: 60%;
+}
+
+
+/* projects section */
+#projects{
+    margin-bottom: 7em;
+} 
+
+#project-title {
+    padding-bottom: 4em auto;
+}
+
+.projects-worked-on {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.project-cards {
+    width: 32%;
+    height: 500px;
+    
+}
+
+
+
+ /* Contact Me Section */
+
+.contact-links {
+    flex-direction: row;
+    width: 80%;
+    padding: 2em 0;
+    margin-bottom: 4em;
+
+}
+
+.sm-link-container {
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+
+
+.sm-link-container:hover {
+    border: 3px solid var(--header-color);
+    transform: translateY(-20px); 
+}
+
+
+
+/* .sm-link-container:hover {
+   
+   transition: 1s;
+} */
+
+.sm-name {
+    display: none;
+}
+
+.SM-icons {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(45deg);
+    transition: all 1s ease-in-out;
+    
+}
+
+.SM-icons:hover {
+    transform: rotate(0deg);
+    
+}
+
+
+
+    
+}
