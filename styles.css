@@ -55,8 +55,11 @@ a {
 }
 
 
+.nav-links{
+    transition: color 300ms, border-bottom 300ms;
+}
 
-.nav-bar-items a:hover {
+.nav-links:hover {
     color: var(--link-color);
     border-bottom: 2px solid var(--link-color);
 }
@@ -82,6 +85,10 @@ a {
     position: fixed;
     top: -1px;
 
+}
+
+#navbar-bg {
+    background-color: var(--header-color);  
 }
 
 
@@ -323,6 +330,7 @@ h3 {
     flex-direction: row;
     text-align: left;
     height: 100vh;
+    justify-content: space-between;
     
     
 }
@@ -339,7 +347,7 @@ h3 {
 
 .intro {
     align-self: center;
-    width: 60%;
+    flex: 55%;
 }
 
 
